@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Script that displays listening TCP and UDP ports with PID and program name
-
+# Display listening TCP and UDP ports with their PID and program name
 ss -tulnp | grep LISTEN
 
