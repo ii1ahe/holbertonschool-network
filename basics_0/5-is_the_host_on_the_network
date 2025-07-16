@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script pings an IP address passed as an argument
 
-# Əgər heç bir argument verilərsə
 if [ -z "$1" ]; then
   echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-else
-  # Ping əmri ilə IP adresinə 5 dəfə sorğu göndərmək
-  ping -c 5 "$1"
+  exit 1
 fi
+
+ping -c 5 "$1"
 
