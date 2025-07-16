@@ -1,6 +1,6 @@
 What is the OSI model?
-The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and design how different networking protocols interact.
+The OSI model is a conceptual framework used to understand network interactions.
 
 How is the OSI model organized?
-From the lowest to the highest level, the OSI model is organized into seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+The OSI model is organized into seven layers from lowest to highest: Physical, Data Link, Network, Transport, Session, Presentation, Application.
 
