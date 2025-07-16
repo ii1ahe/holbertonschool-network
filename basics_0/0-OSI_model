@@ -1,18 +1,6 @@
-2
-From the lowest to the highest level
 What is the OSI model?
-
-The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and design how different networking protocols interact across seven layers.
+The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and design how different networking protocols interact.
 
 How is the OSI model organized?
-
-The OSI model is organized into seven layers:
-
-1. Physical Layer: Responsible for transmitting raw bits over a physical medium.
-2. Data Link Layer: Handles node-to-node data transfer and error detection.
-3. Network Layer: Manages routing and forwarding of data.
-4. Transport Layer: Ensures reliable data transfer between hosts.
-5. Session Layer: Manages sessions or connections between applications.
-6. Presentation Layer: Translates data formats and handles encryption.
-7. Application Layer: Provides network services directly to user applications.
+From the lowest to the highest level, the OSI model is organized into seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
 
