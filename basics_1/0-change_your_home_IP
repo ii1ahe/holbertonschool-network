@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
-# This script makes localhost resolve to 127.0.0.2 and facebook.com to 8.8.8.8 on Ubuntu
+# Changes localhost to 127.0.0.2 and facebook.com to 8.8.8.8 in /etc/hosts
 
-# Backup the original hosts file (optional)
+# Backup existing hosts file
 sudo cp /etc/hosts /etc/hosts.bak
 
-# Create a temporary hosts file without any localhost or facebook.com lines
+# Filter out existing localhost and facebook.com lines, save to temp file
 sudo grep -v -e 'localhost' -e 'facebook.com' /etc/hosts > /tmp/hosts_tmp
 
-# Add the required lines
+# Add the required lines to temp file
 echo "127.0.0.2 localhost" | sudo tee -a /tmp/hosts_tmp > /dev/null
 echo "8.8.8.8 facebook.com" | sudo tee -a /tmp/hosts_tmp > /dev/null
 
-# Replace /etc/hosts with the new file
+# Overwrite /etc/hosts with the temp file
 sudo cp /tmp/hosts_tmp /etc/hosts
-
