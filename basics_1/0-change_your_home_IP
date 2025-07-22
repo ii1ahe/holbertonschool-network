@@ -1,14 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # This script updates /etc/hosts to map localhost to 127.0.0.2 and facebook.com to 8.8.8.8
 
-# Backup current /etc/hosts
 cp /etc/hosts /etc/hosts.bak
-
-# Use sed to replace or add entries
-# Remove existing localhost and facebook.com lines first (əgər varsa)
-sed -i '/localhost/d' /etc/hosts
-sed -i '/facebook.com/d' /etc/hosts
-
-# Add required mappings
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hostsx
+echo "127.0.0.2 localhost" > /etc/hosts.bak
+echo "8.8.8.8 facebook.com" >> /etc/hosts.bak
+cp -f /etc/hosts.bak /etc/hosts
