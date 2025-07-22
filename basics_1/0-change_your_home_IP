@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Backup
+sudo cp /etc/hosts /etc/hosts.bak
+
+# Yeni hosts faylını tmp-də yarat
+sudo bash -c "grep -v '127.0.0.1\s\+localhost' /etc/hosts > /tmp/hosts_new"
+
+# Yeni IP-ləri əlavə et
+echo "127.0.0.2 localhost" | sudo tee -a /tmp/hosts_new > /dev/null
+echo "8.8.8.8 facebook.com" | sudo tee -a /tmp/hosts_new > /dev/null
+
+# /etc/hosts faylını yenilə
+sudo tee /etc/hosts < /tmp/hosts_new > /dev/null
